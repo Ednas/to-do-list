@@ -1,5 +1,17 @@
 var app = angular.module('Todo', []);
 
-app.controller('Todo', function($scope) {
-  $scope.message = "Hey, isn't Angular a pretty neat framework!";
+app.controller('TodoCtrl', function($scope) {
+
+  $scope.todos = [
+    'Get the dogs nails trimmed', 
+    'See what @SwiftOnSecurity is tweeting',
+    'Maybe close some of these tabs'
+  ];
+  
+  $scope.done = function(todo) {
+    var indexOf = $scope.todos.indexOf(todo);
+    if (indexOf !== -1) {
+      $scope.todos.splice(indexOf, 1);
+    }
+  };
 });
