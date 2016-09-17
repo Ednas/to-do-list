@@ -18,6 +18,7 @@
       <ul class="todo-list" ng-repeat="todo in todos track by $index">
 
 
+
         <li>
           <span></span>
           <button class="bt bt-achieve" ng-click="done(todo)">Done</button>
@@ -26,10 +27,12 @@
       
       <ul class="add-todo">
         <li>
-        <!--Added the ng-model for message-->
-          <input type="text" class="txt" ng-model="message" placeholder="New Todo"  />
+        <!--Added the ng-model for message and on keyup adds the event-->
+          <input type="text" class="txt" ng-model="message" placeholder="New Todo" ng-keyup="add($event)" />
         </li>
       </ul>
+
+
       
     </div>
     
