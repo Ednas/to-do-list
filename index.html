@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
-    <div class="page-container">
+<!--makes view aware of Angular app-->
+<body ng-app="Todo">
+
+<!--Added the TodoControl to this secion-->
+    <div class="page-container" ng-controller="TodoCtrl">
       
       <h2>To do</h2>
       <ul class="todo-list">
